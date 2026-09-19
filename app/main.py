@@ -7,7 +7,7 @@ from app.routers import productos, pedidos
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Se ejecuta al arrancar la app: crea las tablas si no existen
+
     crear_bd_y_tablas()
     yield
 

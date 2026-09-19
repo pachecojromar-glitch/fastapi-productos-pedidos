@@ -3,9 +3,6 @@ from datetime import datetime
 from sqlmodel import SQLModel, Field, Relationship
 
 
-# ---------------------------------------------------------------------------
-# PRODUCTO
-# ---------------------------------------------------------------------------
 class ProductoBase(SQLModel):
     nombre: str = Field(index=True)
     descripcion: Optional[str] = None
@@ -34,9 +31,7 @@ class ProductoLectura(ProductoBase):
     id: int
 
 
-# ---------------------------------------------------------------------------
-# PEDIDO
-# ---------------------------------------------------------------------------
+
 class PedidoBase(SQLModel):
     cliente: str
     cantidad: int
